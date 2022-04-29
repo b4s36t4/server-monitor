@@ -1,0 +1,12 @@
+[Unit]
+Description=Montiroing Server System service
+After=network.target
+StartLimitIntervalSec=0[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ubuntu
+ExecStart=%h/server/server-backend/start_server.sh
+
+[Install]
+WantedBy=multi-user.target
